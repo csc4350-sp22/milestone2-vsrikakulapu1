@@ -13,12 +13,9 @@ def index():
 @app.route('/trendingAPI')
 def trendingAPI():
     load_dotenv(find_dotenv())
-
-    BASE_URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
     API_KEY = os.getenv("API_KEY")
     BASE_URL = "https://api.themoviedb.org/3/trending/all/day?api_key=" + API_KEY
-    params = {
-    }
+    params = {}
 
     response = requests.get(
         BASE_URL,
