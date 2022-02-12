@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link href="/static/style.css" rel="stylesheet"/>
+        <style class = backgr>
+
+         body {
+
+            background-image: url("/static/film1.jpeg");
+            max-width: 100%;
+            height: auto;
+            background-repeat: no-repeat;
+            
+         }
+      </style>
+    </head>
+    <body>
+   
+        
+       <div class="container"><center>
+        <div class = "shad">
+            <h1>Movie Hub</h1>
+
+            {% for key, value in movie_vals.items() %}
+                
+                
+                    {%if key == "poster_image"%}
+                    <div class="hoverimg">
+                        <img src = {{value}} alt="Avatar" class="image">
+                            <div class="overlay">
+                             <div class="text">
+
+                                {%elif key == "wiki_url"%}
+                                <p><b><a href = {{value}}> Click to Know more! </a></b></p>
+
+                                {%elif key == "title"%}
+                                <p class = "title">{{value}}</p>
+
+                            {%elif key == "tagline"%}
+                            <p class = "tagline">{{value}}</p>
+
+                            {%elif key == "genres"%}
+                            <p class = "genres">{{key}} : {{value}}</p>
+                        
+                    {%endif%}
+                {% endfor %}
+            </div>
+
+                    </div>
+                </div>
+             </div>
+           
+           </center>
+        </div>
+    </body>
+
+</html>
+

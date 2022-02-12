@@ -1,0 +1,102 @@
+body {
+    font-family: cursive; 
+    padding: 0;
+    margin: 0;
+   
+   }
+
+.container {
+    display: inline-block;
+    float: right;
+    padding-left: 60%;
+    padding-top: 4%;
+    width: 38vw;
+    top: 50px;
+    margin-top: 15px;
+    background-color: "light yellow";
+
+}
+
+.shad{
+	padding: 10px;
+	margin: 20px;
+   box-shadow: 4px 5px 53px 15px rgba(207,18,97,0.82);
+-webkit-box-shadow: 4px 5px 53px 15px rgba(207,18,97,0.82);
+-moz-box-shadow: 4px 5px 53px 15px rgba(207,18,97,0.82);
+}
+    
+
+h1{
+	text-align: center;
+}
+
+.title{
+	font-weight: bold;
+	font-family: Times New Roman;
+	font-size: 20px;
+}
+
+.genres{
+	font-style: bold;
+	font-family: Times New Roman;
+}
+
+.tagline{
+	font-style: bold;
+	font-family: Times New Roman;
+}
+
+img{
+
+  width: 80%;
+  background-color: yellow;
+  box-shadow: 20px 40px 80px 20px rgba(2, 3, 0, 0.2), 20px 40px 80px 20px rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  filter: brightness(120%);
+
+}
+
+
+.hoverimg {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fdfdcb;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.hoverimg:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  opacity: 0.8
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+*{
+	font-family: cursive !important;
+}
