@@ -1,6 +1,9 @@
 <html>
     <head>
         <link href="/static/style.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <style class = backgr>
 
          body {
@@ -16,7 +19,8 @@
     <body>
    
         
-       <div class="container"><center>
+       <div class="container">
+        <center>
         <div class = "shad">
             <h1>Movie Hub</h1>
 
@@ -51,7 +55,41 @@
            
            </center>
         </div>
+
+
+
+<div class="second_block"> <div class="my_form">
+        <center><form method="POST" action="/save_reviews">
+
+           <div>
+                <label for="movieid">Movie ID</label>
+                <input type="text" id="movieid" name='movieid' value={{movie_id}} readonly>
+                    <label for="rating">Rating (out of 5)</label>
+             <input type="text" id="rating" name="rating"/>
+          
+        <div style="margin-top:50px;">
+             <div>
+                <textarea rows="5" cols="50" id="review" name = "review" placeholder="Leave a review!"></textarea>
+     </div>
+            <input type="submit" value="Submit!"/>
+        </form>
+    </center>
+</div>
+
+<center><div class = "my_form">
+            <h1>Movie Reviews</h1>
+
+            {% for item in reviews %}
+                <p class = "title">User: {{item['username']}}</p>
+                <p class = "tagline">Rating: {{item['rating']}}/5</p>
+                <p class = "genres">{{item['review']}}</p> 
+            {% endfor %}
+          </div></center> </div>
     </body>
+
+    <script type="text/javascript">
+      console.log({{reviews}});
+    </script>
 
 </html>
 

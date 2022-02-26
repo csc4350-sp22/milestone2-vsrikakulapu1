@@ -2,8 +2,28 @@ body {
     font-family: cursive; 
     padding: 0;
     margin: 0;
+    display: grid;
    
    }
+
+
+.formClass{
+  padding-top: 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 20px;
+
+}
+
+.headings{
+
+padding-top: 10px;
+margin-top: 5%;
+font-size: 30px;
+font-style: cursive;
+
+
+}
 
 .container {
     display: inline-block;
@@ -56,7 +76,6 @@ img{
 
 }
 
-
 .hoverimg {
   position: relative;
   width: 50%;
@@ -97,6 +116,16 @@ img{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.my_form {
+margin-top: 0px;
+}
+
+.second_block {
+  background: beige;
+  padding-top: 20px;
+}
+
 *{
 	font-family: cursive !important;
 }
