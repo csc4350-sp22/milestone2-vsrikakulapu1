@@ -19,7 +19,7 @@ app = flask.Flask(__name__)
 
 app.config["SECRET_KEY"] = "a safe and secure secret key is used here"
 # Point SQLAlchemy to your Heroku database
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("UP_DATABASE_URL")
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 # Gets rid of a warning
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
